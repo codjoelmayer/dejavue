@@ -4,17 +4,19 @@
       <Friends />
     </div>
     <div class="row">
-
+      <Products />
     </div>
   </div>
 </template>
 
 <script>
 import Friends from '@/components/Friends.vue'
+import Products from '@/components/Products.vue'
 export default {
   name: 'App',
   components: {
-    Friends
+    Friends,
+    Products
   }
 }
 </script>

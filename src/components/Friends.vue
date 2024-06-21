@@ -3,7 +3,7 @@
         <div class="row">
             <h2 class="display-2">Best Friends</h2>
         </div>
-        <div class="row gap-2">
+        <div class="row gap-2" v-if="friends.length">
             <Card v-for="friend in friends" :key="friend.id">
                 <template #cardHeader>
                     <img :src="friend.profile" :alt="friend.firstName" class="img-fluid" loading="lazy">
@@ -14,17 +14,21 @@
 
             </Card>
         </div>
+        <div class="d-flex justify-content-center" v-else>
+            <div class="spinner-border" role="status">
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 import Card from './Card.vue'
-    export default {
+export default {
     name: "FriendComp",
     components: {
         Card
     },
-    data() { 
+    data() {
         return {
             friends: [
                 {
@@ -54,10 +58,8 @@ import Card from './Card.vue'
             ]
         }
     }
-        
-    }
+
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

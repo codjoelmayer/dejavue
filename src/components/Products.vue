@@ -3,7 +3,7 @@
         <div class="row">
             <h2 class="display-2">Products</h2>
         </div>
-        <div class="row">
+        <div class="row gap-2">
             <Card v-for="product in products" :key="product.id">
                 <template #cardHeader>
                     <img :src="product.image" :alt="product.make" class="img-fluid" loading="lazy">
