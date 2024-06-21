@@ -3,7 +3,7 @@
         <div class="row">
             <h2 class="display-2">Products</h2>
         </div>
-        <div class="row gap-2">
+        <div class="row gap-2 justify-content-center">
             <Card v-for="product in products" :key="product.id">
                 <template #cardHeader>
                     <img :src="product.image" :alt="product.make" class="img-fluid" loading="lazy">
@@ -20,12 +20,12 @@
 
 <script>
 import Card from './Card.vue'
-    export default {
+export default {
     name: "ProductComp",
     components: {
         Card
     },
-    data() { 
+    data() {
         return {
             products: [
                 {
@@ -59,9 +59,7 @@ import Card from './Card.vue'
             ]
         }
     }
-    }
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
